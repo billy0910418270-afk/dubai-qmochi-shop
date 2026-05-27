@@ -1,6 +1,162 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
-  background: red;
+  background: #120701;
   color: white;
   font-family: sans-serif;
+}
+
+.hero {
+  min-height: 100vh;
+  padding: 96px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 75% 20%, rgba(245, 210, 140, 0.25), transparent 32%),
+    linear-gradient(135deg, #120701, #2a1008);
+}
+
+.goldLight {
+  position: absolute;
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  background: #d8b35a;
+  filter: blur(100px);
+  opacity: 0.35;
+  right: 8%;
+  top: 22%;
+  animation: float 4s ease-in-out infinite;
+}
+
+.content {
+  width: 100%;
+  max-width: 980px;
+  position: relative;
+  z-index: 2;
+  animation: fadeUp 1s ease both;
+}
+
+.tag {
+  color: #d8b35a;
+  letter-spacing: 5px;
+  font-size: 13px;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: clamp(56px, 13vw, 112px);
+  line-height: 1.05;
+  color: #f5d28c;
+  margin: 0 0 28px;
+}
+
+.subtitle {
+  font-size: clamp(18px, 4vw, 24px);
+  line-height: 1.9;
+  color: #fff4dc;
+}
+
+.buttons {
+  display: flex;
+  gap: 16px;
+  margin-top: 36px;
+  flex-wrap: wrap;
+}
+
+.buttons a,
+.order button {
+  padding: 16px 30px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.primary,
+.order button {
+  background: linear-gradient(135deg, #f5d28c, #c69235);
+  color: #1b0903;
+  border: 0;
+}
+
+.secondary {
+  border: 1px solid #f5d28c;
+  color: #f5d28c;
+}
+
+.buttons a:hover,
+.order button:hover {
+  transform: translateY(-4px);
+}
+
+.features {
+  padding: 80px 24px;
+  display: grid;
+  gap: 24px;
+  background: #0d0301;
+}
+
+.card {
+  max-width: 980px;
+  width: 100%;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(245, 210, 140, 0.16);
+  border-radius: 32px;
+  padding: 42px 32px;
+  animation: fadeUp 1s ease both;
+}
+
+.card h2 {
+  color: #f5d28c;
+  font-size: clamp(30px, 7vw, 44px);
+  margin: 0 0 18px;
+}
+
+.card p,
+.order p {
+  font-size: clamp(18px, 4vw, 22px);
+  line-height: 1.8;
+}
+
+.order {
+  text-align: center;
+  padding: 90px 24px;
+  background: #160804;
+}
+
+.order h2 {
+  color: #f5d28c;
+  font-size: clamp(36px, 8vw, 52px);
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(28px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-24px);
+  }
 }
