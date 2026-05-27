@@ -7,8 +7,12 @@ export default function Home() {
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
+        position: "relative",
+        overflow: "hidden",
         background: "linear-gradient(135deg,#120701,#2a1008)"
       }}>
+        <div className="blur1"></div>
+        <div className="blur2"></div>
         <div style={{ maxWidth: 980, width: "100%" }}>
           <p style={{ color: "#d8b35a", letterSpacing: 5 }}>
             DUBAI CHOCOLATE Q MOCHI

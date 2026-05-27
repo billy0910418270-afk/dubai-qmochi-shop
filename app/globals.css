@@ -164,3 +164,34 @@ h1 {
     transform: translateY(-24px);
   }
 }
+.blur1,
+.blur2{
+  position:absolute;
+  border-radius:999px;
+  filter:blur(120px);
+  opacity:.35;
+}
+
+.blur1{
+  width:320px;
+  height:320px;
+  background:#ffb347;
+  top:10%;
+  left:15%;
+  animation:float 6s ease-in-out infinite;
+}
+
+.blur2{
+  width:260px;
+  height:260px;
+  background:#ff6a00;
+  bottom:10%;
+  right:15%;
+  animation:float 8s ease-in-out infinite;
+}
+
+@keyframes float{
+  0%{ transform:translateY(0); }
+  50%{ transform:translateY(-20px); }
+  100%{ transform:translateY(0); }
+}
