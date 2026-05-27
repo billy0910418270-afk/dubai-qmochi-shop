@@ -1,68 +1,69 @@
 export default function Home() {
   return (
-    <main className="main">
-      <section className="hero">
-        <div className="goldLight"></div>
+    <main style={{ background: "#120701", color: "white", minHeight: "100vh" }}>
+      <section style={{
+        minHeight: "100vh",
+        padding: "90px 24px",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        background: "linear-gradient(135deg,#120701,#2a1008)"
+      }}>
+        <div style={{ maxWidth: 980, width: "100%" }}>
+          <p style={{ color: "#d8b35a", letterSpacing: 5 }}>
+            DUBAI CHOCOLATE Q MOCHI
+          </p>
 
-        <div className="content">
-          <p className="tag">DUBAI CHOCOLATE Q MOCHI</p>
-
-          <h1>
-            杜拜巧克力
-            <br />
-            Q餅
+          <h1 style={{
+            fontSize: "clamp(56px,13vw,112px)",
+            lineHeight: 1.05,
+            color: "#f5d28c",
+            margin: "20px 0"
+          }}>
+            杜拜巧克力<br />Q餅
           </h1>
 
-          <p className="subtitle">
-            濃郁巧克力外皮，包覆杜拜風味開心果內餡。
-            <br />
+          <p style={{ fontSize: 22, lineHeight: 1.9 }}>
+            濃郁巧克力外皮，包覆杜拜風味開心果內餡。<br />
             一口咬下，感受精品甜點般的奢華爆餡。
           </p>
 
-          <div className="buttons">
-            <a href="#order" className="primary">
+          <div style={{ marginTop: 36, display: "flex", gap: 16 }}>
+            <a href="#order" style={{
+              background: "#f5d28c",
+              color: "#1b0903",
+              padding: "16px 30px",
+              borderRadius: 999,
+              textDecoration: "none",
+              fontWeight: "bold"
+            }}>
               立即預購
-            </a>
-
-            <a href="#features" className="secondary">
-              探索風味
             </a>
           </div>
         </div>
       </section>
 
-      <section id="features" className="features">
-        {[
-          [
-            "爆餡口感",
-            "濃郁巧克力與開心果內餡交織，一口咬下層次瞬間綻放。",
-          ],
-          [
-            "精品風味",
-            "以杜拜甜點靈感打造，適合送禮、聚會與限量販售。",
-          ],
-          [
-            "手工製作",
-            "每日新鮮製作，保留最細緻的香氣與Q彈口感。",
-          ],
-        ].map(([title, text]) => (
-          <div className="card" key={title}>
-            <h2>{title}</h2>
-            <p>{text}</p>
+      <section style={{ padding: "80px 24px", display: "grid", gap: 24 }}>
+        {["爆餡口感", "精品風味", "手工製作"].map((title) => (
+          <div key={title} style={{
+            maxWidth: 980,
+            width: "100%",
+            margin: "0 auto",
+            background: "rgba(255,255,255,.06)",
+            borderRadius: 32,
+            padding: 36
+          }}>
+            <h2 style={{ color: "#f5d28c", fontSize: 36 }}>{title}</h2>
+            <p style={{ fontSize: 20, lineHeight: 1.8 }}>
+              杜拜風格甜點，適合送禮、聚會與限量販售。
+            </p>
           </div>
         ))}
       </section>
 
-      <section id="order" className="order">
-        <h2>限量預購中</h2>
-
-        <p>
-          想品嚐杜拜巧克力Q餅，
-          <br />
-          請先加入購買名單。
-        </p>
-
-        <button>我要預購</button>
+      <section id="order" style={{ textAlign: "center", padding: "90px 24px" }}>
+        <h2 style={{ color: "#f5d28c", fontSize: 42 }}>限量預購中</h2>
+        <p style={{ fontSize: 20 }}>想品嚐杜拜巧克力Q餅，請先加入購買名單。</p>
       </section>
     </main>
   )
