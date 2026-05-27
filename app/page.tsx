@@ -64,6 +64,28 @@ export default function Home() {
           </a>
         </div>
       </section>
+      <section style={{ padding: "80px 24px", display: "grid", gap: 24 }}>
+  {[
+    ["爆餡口感", "濃郁巧克力與開心果內餡交織，一口咬下層次瞬間綻放。"],
+    ["精品風味", "以杜拜甜點靈感打造，適合送禮、聚會與限量販售。"],
+    ["手工製作", "每日新鮮製作，保留最細緻的香氣與Q彈口感。"],
+  ].map(([title, text]) => (
+    <div
+      key={title}
+      style={{
+        maxWidth: 980,
+        width: "100%",
+        margin: "0 auto",
+        background: "rgba(255,255,255,.08)",
+        borderRadius: 32,
+        padding: 36,
+      }}
+    >
+      <h2 style={{ color: "#f5d28c", fontSize: 36 }}>{title}</h2>
+      <p style={{ fontSize: 20, lineHeight: 1.8 }}>{text}</p>
+    </div>
+  ))}
+</section>
     </main>
   )
 }
