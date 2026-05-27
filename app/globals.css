@@ -195,3 +195,36 @@ h1 {
   50%{ transform:translateY(-20px); }
   100%{ transform:translateY(0); }
 }
+body {
+  margin: 0;
+  background: #120701;
+  font-family: sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.blur1,
+.blur2 {
+  position: absolute;
+  border-radius: 999px;
+  filter: blur(120px);
+  opacity: 0.45;
+}
+
+.blur1 {
+  width: 420px;
+  height: 420px;
+  background: #ffb347;
+  top: 10%;
+  left: 5%;
+}
+
+.blur2 {
+  width: 320px;
+  height: 320px;
+  background: #ff5e62;
+  bottom: 10%;
+  right: 10%;
+}
