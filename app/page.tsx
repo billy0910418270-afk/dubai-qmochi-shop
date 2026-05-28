@@ -32,7 +32,7 @@ export default function Home() {
             maxWidth: 1200,
             width: "100%",
             display: "grid",
-            gridTemplateColumns: "1fr 1fr",
+            gridTemplateColumns: "1fr",
             alignItems: "center",
             gap: 40,
             position: "relative",
@@ -127,15 +127,18 @@ export default function Home() {
             }}
           >
             <Image
-              src="/mochi.png"
-              alt="Dubai Mochi"
-              width={520}
-              height={520}
-              style={{
-                objectFit: "contain",
-                filter: "drop-shadow(0 30px 60px rgba(0,0,0,.45))",
-              }}
-            />
+             src="/mochi.png"
+             alt="Dubai Mochi"
+             width={520}
+             height={520}
+             style={{
+             width: "100%",
+             maxWidth: 360,
+             height: "auto",
+             objectFit: "contain",
+             filter: "drop-shadow(0 30px 60px rgba(0,0,0,.45))",
+             }}
+          />  
           </div>
         </div>
       </section>
